@@ -80,6 +80,27 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between logos */
+    margin-top: 15px;
+}
+
+.header-logo {
+    max-width: 100px; /* Adjust size as needed */
+    height: auto;
+    border: 2px solid black; /* Black border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px; /* Padding for inner spacing */
+    transition: transform 0.3s;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+
 .about-section {
     display: flex;
     align-items: center;
@@ -92,6 +113,16 @@ body {
     margin-right: 20px;
 }
 
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* .highlight {
+    color: #ff99cc; 
+    font-weight: bold;
+} */
+
 .profile-container {
     flex: 1;
     display: flex;
@@ -103,7 +134,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 15px; /* Rounded edges */
-    border: 3px solid #ee88f1; /* Dark blue border */
+    border: 3px solid #003366; /* Dark blue border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -112,7 +143,6 @@ body {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .education-box {
     display: flex;
@@ -133,7 +163,7 @@ body {
 }
 
 .slug-img {
-    max-width: 200px; /* Smaller size */
+    max-width: 150px; /* Smaller size */
     width: 100%;
     height: auto;
     border-radius: 15px; /* Rounded edges */
@@ -145,6 +175,94 @@ body {
 .slug-img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gpa-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap; /* Prevents line breaks */
+}
+
+.gpa-logo {
+    max-width: 200px; /* Increase this value for a larger image */
+    width: 100%; /* Ensures the image scales properly */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    border: 3px solid #17298a; /* Blue border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.baskin-logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%; /* Allow container to take full width */
+}
+
+
+.gpa-logo:hover {
+    transform: scale(1.2); /* Increases size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.coursework-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coursework-column {
+    width: 45%; /* Adjust as needed for spacing */
+}
+
+.skills-text {
+    flex: 3;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.skills-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.skills-header {
+    background-color: #ffffff; /* White background */
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    color: #99004d; /* Darker pink for the header */
+    /* text-align: center; */
+    font-size: 1.5em; /* Adjust font size as needed */
+}
+
+.skills-content {
+    background-color: #ffe6f0; /* Light pink background */
+    border: 1px solid #ffb3d9; /* Pink border */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners on all sides */
+    margin-top: 0; /* Ensure no extra space at the top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    line-height: 1.6; /* Space between lines */
+}
+
+.skills-content p {
+    margin-bottom: 10px; /* Space between paragraphs */
+}
+
+.hover-image {
+    height: 90px; /* Larger base size */
+    margin-right: 10px;
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+    background-color: #8683bc; /* Black background */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.hover-image:hover {
+    transform: scale(1.1); /* Enlarge the image */
+    background-color: #8683bc; /* Keep black background */
 }
 
 
