@@ -34,6 +34,11 @@ body {
     font-size: 1.1em;
 }
 
+/* Adjusting section headings for offset */
+section[id] {
+    scroll-margin-top: 60px; /* Adjust this to match or exceed the navbar height */
+}
+
 .banner {
     text-align: center;
     background-color: #ffd1e1;
