@@ -265,6 +265,27 @@ body {
     background-color: #8683bc; /* Keep black background */
 }
 
+.hobbies-images {
+    display: flex;
+    gap: 15px; /* Space between images */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px; /* Space above the image row */
+}
+
+.hobby-image {
+    width: 150px; /* Adjust base size as needed */
+    height: 280px;
+    border: 3px solid #ffb3d9; /* Pink outline */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hobby-image:hover {
+    transform: scale(1.2); /* Enlarge image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
 
 footer {
     text-align: center;
