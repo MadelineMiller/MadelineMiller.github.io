@@ -5,34 +5,96 @@ body {
     background-color: #ffe6f0;
 }
 
+/* Basic navbar styling */
 .navbar {
     background-color: #ff99cc;
-    color: #0a0101;
-    padding: 10px 0;
+    color: #ffffff;
+    padding: 10px 15px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navbar ul {
+/* Navbar title styling */
+.navbar-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Center the navbar links */
+#navbar-links {
+    display: flex;
     list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center align the links */
+    gap: 15px; /* Adjust spacing between links */
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
-.navbar li {
-    margin: 0 15px;
+#navbar-links {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 15px;
+    margin-left: 70px; /* Add margin to push links away from the title */
+    padding: 0;
 }
+
 
 .navbar a {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.1em;
 }
+
+/* Hide the navbar links and show the toggle button on small screens */
+.navbar-toggle {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding-right: 40px; /* Add padding to the right of the toggle icon */
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+    #navbar-links {
+        display: none; /* Hide navbar links initially */
+        flex-direction: column;
+        background-color: #ff99cc;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        transform: none; /* Remove centering transform for dropdown */
+    }
+
+    #navbar-links.show {
+        display: flex; /* Show navbar links when the menu is open */
+    }
+
+    .navbar-toggle {
+        display: block; /* Show the toggle button on small screens */
+        margin-left: auto;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
 
 /* Adjusting section headings for offset */
 section[id] {
