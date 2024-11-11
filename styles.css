@@ -93,18 +93,28 @@ section[id] {
 }
 
 .header-logo {
-    max-width: 100px; /* Adjust size as needed */
-    height: auto;
+    width: 80px; /* Set a fixed width */
+    height: 80px; /* Set a fixed height to make them square */
     border: 2px solid black; /* Black border */
     border-radius: 10px; /* Rounded corners */
     padding: 5px; /* Padding for inner spacing */
     transition: transform 0.3s;
 }
 
+
 .header-logo:hover {
     transform: scale(1.05);
 }
 
+/* Apply scroll-margin-top to specific sections */
+#keysight-experience,
+#jpmorgan-fellow,
+#education {
+    scroll-margin-top: 60px; /* Adjust this to match or exceed the navbar height */
+}
+
+
+/* about section */
 
 .about-section {
     display: flex;
@@ -255,6 +265,54 @@ section[id] {
 .skills-content p {
     margin-bottom: 10px; /* Space between paragraphs */
 }
+
+/* experience section */
+
+.experience-text ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.experience-text li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+
+.experience-box {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start;
+}
+
+.experience-images {
+    display: flex;
+    justify-content: space-evenly; /* Evenly spaces the images */
+    margin-top: 10px; /* Space above images */
+    width: 100%; /* Ensures full width for even spacing */
+}
+
+.experience-pic {
+    width: auto; /* Allows the width to adjust based on the height */
+    height: 250px; /* Set an explicit height */
+    max-height: 800px; /* Ensures the image can be taller if needed */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid red; /* Red border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+
+
+.experience-pic:hover {
+    transform: scale(1.3); /* Enlarge the image on hover */
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5); /* Red gradient shadow */
+}
+
+
+
+
 
 .hover-image {
     height: 90px; /* Larger base size */

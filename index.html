@@ -23,11 +23,23 @@
     <header class="banner">
         <h1>Madeline Miller</h1>
         <p>R&D Software Intern @ Keysight | CS B.S. @ UC Santa Cruz | AI Studio Fellow @ JP Morgan Chase</p>
-        <div class="logo-container">
+        <!-- <div class="logo-container">
             <img src="assets/keysight-logo.png" alt="Keysight Logo" class="header-logo">
             <img src="assets/ucsc-logo.png" alt="UC Santa Cruz Logo" class="header-logo">
             <img src="assets/jp-morgan.png" alt="JP Morgan Logo" class="header-logo">
+        </div> -->
+        <div class="logo-container">
+            <a href="#keysight-experience">
+                <img src="assets/keysight-logo.png" alt="Keysight Logo" class="header-logo">
+            </a>
+            <a href="#education">
+                <img src="assets/ucsc-logo.png" alt="UC Santa Cruz Logo" class="header-logo">
+            </a>
+            <a href="#jpmorgan-fellow">
+                <img src="assets/jp-morgan.png" alt="JP Morgan Logo" class="header-logo">
+            </a>
         </div>
+        
     </header>
     
 
@@ -118,22 +130,30 @@
                 </div>
         </section>
 
-        
-        
-        
-        
-
         <section id="experience" class="card">
             <h2>Experience</h2>
-            <div class="dynamic-card">
+            <!-- Add an id to Keysight experience for targeted linking -->
+            <div id="keysight-experience" class="dynamic-card experience-box">
+                <div class="experience-text">
+                    <h3>R&D Software and DevOps Intern, Keysight Technologies</h3>
+                    <p>June 2024 - Present</p>
+                    <ul>
+                        <li>Developed an image generation system, as measured by successful deployment of customized Windows instances to signal generators, through efficient automation and BIOS configuration management.</li>
+                        <li>Streamlined the build promotions process, as demonstrated by reduced reliance on executables and enhanced functionalities, by using REST API, Jenkins, JFrog Artifactory, and by building a full stack app.</li>
+                    </ul>
+                </div>
+                <div class="experience-images">
+                    <img src="assets/key1.png" alt="Keysight Image 1" class="experience-pic">
+                    <img src="assets/key2.png" alt="Keysight Image 2" class="experience-pic">
+                </div>
+            </div>
+            <!-- Add an id to JPMorgan experience for targeted linking -->
+            <div id="jpmorgan-fellow" class="dynamic-card">
                 <h3>AI Studio Fellow, JP Morgan Chase</h3>
                 <p>Developed an AI-driven financial news analysis agent for predicting stock price impacts using NLP and deep learning.</p>
             </div>
-            <div class="dynamic-card">
-                <h3>R&D Software Intern, Keysight Technologies</h3>
-                <p>Created image generation systems and streamlined build promotions using modern DevOps tools.</p>
-            </div>
         </section>
+        
 
         <section id="projects" class="card">
             <h2>Projects</h2>
