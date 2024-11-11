@@ -191,7 +191,7 @@ section[id] {
 }
 
 .slug-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -225,14 +225,61 @@ section[id] {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* courses subsection */
+
 .coursework-container {
     display: flex;
     justify-content: space-between;
+    padding: 0 70px; /* Adds padding to prevent content from touching the edges */
 }
 
 .coursework-column {
-    width: 45%; /* Adjust as needed for spacing */
+    width: 45%; /* Controls the width of each column */
+    margin: 0; /* Reset any default margin */
 }
+
+.coursework-column ul {
+    line-height: 1.8; /* Increase line spacing within each column */
+    margin: 0;
+    padding: 0;
+}
+
+.coursework-column li {
+    margin-bottom: 7px; /* Space between each list item */
+}
+
+.course-images-container {
+    display: flex;
+    justify-content: center; /* Centers the images in a horizontal line */
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    gap: 20px; /* Space between images */
+    margin-top: 20px; /* Space above the image row */
+}
+
+.course-image {
+    width: auto; /* Allows the image width to adjust based on the container */
+    /* max-width: 200px; */
+    height: 150px; /* Controls the height */
+    border: 3px solid purple; /* Purple border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(128, 0, 128, 0.2); /* Purple drop shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.course-image:hover {
+    transform: scale(2); /* Enlarges image on hover */
+    box-shadow: 0 8px 16px rgba(128, 0, 128, 0.5); /* More pronounced purple shadow on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .course-image {
+        height: 150px; /* Reduce image height for smaller screens */
+        max-width: auto; /* Reduce image width for smaller screens */
+    }
+}
+
+
 
 .skills-text {
     flex: 3;
