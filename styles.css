@@ -150,22 +150,46 @@ section[id] {
 .logo-container {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Space between logos */
+    gap: 30px; 
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
+.main-logos, .social-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between each logo in the row */
+}
+
+/* Style for the main logos */
 .header-logo {
-    width: 80px; /* Set a fixed width */
-    height: 80px; /* Set a fixed height to make them square */
-    border: 2px solid black; /* Black border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 5px; /* Padding for inner spacing */
-    transition: transform 0.3s;
+    width: 80px;
+    height: 80px;
+    border: 3px solid purple; /* Pink outline */
+    border-radius: 10px;
+    /* padding: 5px; */
+    box-shadow: 0 4px 8px rgba(255, 20, 147, 0.4); /* Pinkish drop shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transform and shadow transition */
 }
-
 
 .header-logo:hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
+    box-shadow: 0 8px 16px rgba(255, 20, 147, 0.6); /* Stronger shadow on hover */
+}
+
+/* Style for the larger social logos */
+.social-logo {
+    width: 80px; /* Larger size */
+    height: 80px;
+    border: 3px solid purple; /* Purple outline */
+    border-radius: 20px; /* Rounded corners */
+    /* padding: 2px; */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-logo:hover {
+    transform: scale(1.3); /* Enlarge on hover */
+    box-shadow: 0 8px 16px rgba(128, 0, 128, 0.5); /* Purple shadow */
 }
 
 /* Apply scroll-margin-top to specific sections */
