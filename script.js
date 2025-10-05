@@ -631,7 +631,7 @@ function processCommand(cmd) {
         const result = commands[command](args);
         if (result) addOutput(result);
         // Scroll to top after adding command output so user sees the beginning
-        setTimeout(() => scrollToBottom(), 50);
+        setTimeout(() => scrollToTop(), 50);
     } else if (cmd.trim() === '') {
         // Do nothing for empty command
     } else {
