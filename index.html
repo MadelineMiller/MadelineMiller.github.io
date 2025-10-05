@@ -2,252 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madeline's Website</title>
+    <title>root@madelinemiller:~$</title>
+    <link rel="icon" type="image/png" href="assets/profile-pics/oakes-profile-pic.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/beach.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-    <span class="navbar-title">Madeline's Website</span>
-    <div class="navbar-spacer"></div> <!-- Spacer to push links to the center -->
-    <ul id="navbar-links">
-        <li><a href="#about" onclick="closeNavbar()">About</a></li>
-        <li><a href="#education" onclick="closeNavbar()">Education</a></li>
-        <li><a href="#skills" onclick="closeNavbar()">Skills</a></li>
-        <li><a href="#experience" onclick="closeNavbar()">Experience</a></li>
-        <li><a href="#projects" onclick="closeNavbar()">Projects</a></li>
-        <li><a href="#hobbies" onclick="closeNavbar()">Hobbies</a></li>
-    </ul>
-    <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
-</nav>
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
 
-    
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Boot Screen -->
+    <div id="boot-screen">
+        <div class="boot-line" style="animation-delay: 0s;">BIOS Version 2.1.4</div>
+        <div class="boot-line" style="animation-delay: 0.3s;">Initializing security protocols...</div>
+        <div class="boot-line" style="animation-delay: 0.6s;">Loading portfolio.sys... [OK]</div>
+        <div class="boot-line" style="animation-delay: 0.9s;">Mounting credentials... [OK]</div>
+        <div class="boot-line" style="animation-delay: 1.2s;">Starting terminal interface...</div>
+        <div class="boot-line" style="animation-delay: 1.5s; color: #33ff88;">ACCESS GRANTED</div>
+        <div class="boot-line" style="animation-delay: 1.8s;">Welcome to the MADELINE MILLER SYSTEM</div>
+    </div>
+
+    <!-- Terminal -->
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <span class="terminal-btn btn-close"></span>
+            <span class="terminal-btn btn-minimize"></span>
+            <span class="terminal-btn btn-maximize"></span>
+            <span class="terminal-title">root@madelinemiller: ~/portfolio</span>
+        </div>
+        <div class="terminal-content" id="terminal-output">
+            <!-- Output will be generated here -->
+        </div>
+        <div class="input-line">
+            <span class="prompt">guest@system:~$</span>
+            <input type="text" id="terminal-input" autofocus spellcheck="false" autocomplete="off">
+        </div>
+    </div>
 
     <script src="script.js"></script>
-    
-
-    <header class="banner">
-        <h1>Madeline Miller</h1>
-        <p>R&D Software Intern @ Keysight | CS B.S. @ UC Santa Cruz | AI Studio Fellow @ JP Morgan Chase</p>
-      
-        <div class="logo-container">
-            <a href="#keysight-experience">
-                <img src="assets/keysight-logo.png" alt="Keysight Logo" class="header-logo">
-            </a>
-            <a href="#education">
-                <img src="assets/ucsc-logo.png" alt="UC Santa Cruz Logo" class="header-logo">
-            </a>
-            <a href="#jpmorgan-fellow">
-                <img src="assets/jp-morgan.png" alt="JP Morgan Logo" class="header-logo">
-            </a>
-        </div>
-
-        <!-- Social media logos below -->
-        <div class="social-logos">
-            <a href="https://github.com/MadelineMiller" target="_blank">
-                <img src="assets/github.png" alt="GitHub Logo" class="social-logo">
-            </a>
-            <a href="https://linkedin.com/in/madeline-miller" target="_blank">
-                <img src="assets/linkedin.png" alt="LinkedIn Logo" class="social-logo">
-            </a>
-        </div>
-            
-    </header>
-    
-
-    <main>
-        
-        <section id="about" class="card about-section">
-            <div class="about-text">
-                <h2>About</h2>
-                <p>
-                    <span class="highlight">Hi there!</span> I'm <strong>Madeline</strong>, a dedicated <strong>4th-year Computer Science student</strong> at <strong>UC Santa Cruz</strong>, driven by my passion for <span class="emphasize">AI/ML</span> and software engineering. <br> <br> I thrive on building innovative solutions and championing initiatives that <span class="highlight">empower women in tech</span>. Thank you for visiting my profile—explore and get to know more about my journey and projects!
-                </p>
-            </div>
-            <div class="profile-container">
-                <img src="assets/oakes-profile-pic.png" alt="Madeline Miller's Profile Picture" class="profile-pic">
-            </div>
-        </section>
-
-        <section id="education" class="card">
-            <h2>Education</h2>
-            <div class="dynamic-card education-box">
-                <div class="education-info">
-                    <p><strong>Computer Science B.S.</strong></p>
-                    <p>University of California, Santa Cruz (Sept. 2021 – March 2025)</p>
-                </div>
-                <div class="banana-slug">
-                    <img src="assets/banana-slug.png" alt="Banana Slug" class="slug-img">
-                </div>
-            </div>
-            <div class="dynamic-card gpa-section">
-                <p><strong>GPA: 3.9/4.0</strong> <br> <br> Dean’s Honors List <br> <br> Top 15% of Engineering Class</p>
-                <div class="baskin-logo">
-                    <img src="assets/baskin-engineering.png" alt="Baskin Engineering Logo" class="gpa-logo">
-                    
-                </div>
-            </div>
-            <div class="dynamic-card">
-                <p><strong>Relevant Coursework:</strong></p>
-                <div class="coursework-container">
-                    <div class="coursework-column">
-                        <ul>
-                            <li>Natural Language Processing</li>
-                            <li>Foundations in AI/ML</li>
-                            <li>Applied Machine Learning: Deep Learning</li>
-                            <li>Computer Architecture</li>
-                            <li>Linear Algebra with MATLAB</li>
-                        </ul>
-                    </div>
-                    <div class="coursework-column">
-                        <ul>
-                            <li>Data Structures & Algorithms in C/C++</li>
-                            <li>Software Engineering in Flutter & Firebase</li>
-                            <li>Programming Abstractions in Python</li>
-                            <li>Computer Systems Design in C</li>
-                            <li>Assembly Language</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Image container below the text -->
-                <div class="course-images-container">
-                    <img src="assets/deep-learning.png" alt="Deep Learning Image" class="course-image">
-                    <img src="assets/dsa.png" alt="Data Structures & Algorithms Image" class="course-image">
-                    <img src="assets/nlp.png" alt="Natural Language Processing Image" class="course-image">
-                </div>
-            </div>
-        </section>
-        
-        
-
-    
-        <section id="skills" class="card">
-            <h2 class="skills-header">Skills</h2>
-                <div class="skills-text">
-                    <div class="dynamic-card skills-content">
-                        <p><strong>Programming Languages:</strong> Python, C, C++, JavaScript, MATLAB, Dart, RISC-V Assembly, Haskell</p>
-                        <div class="programming-images">
-                            <img src="assets/python.png" alt="Python" class="hover-image">
-                            <img src="assets/c.png" alt="C" class="hover-image">
-                            <img src="assets/matlab.png" alt="MATLAB" class="hover-image">
-                        </div>
-                        
-                        <p><strong>Other:</strong> Azure, LangChain, Flask, LLMs, Flutter, Firebase, HTML, CSS, Git Version Control, Bash, Scrum/Agile, CI/CD, Seaborn, Matplotlib, Numpy, Pandas, Scikit-learn, PyTorch</p>
-                        <div class="other-images">
-                            <img src="assets/flutter.png" alt="Flutter" class="hover-image">
-                            <img src="assets/git.png" alt="Git" class="hover-image">
-                            <img src="assets/pytorch.png" alt="PyTorch" class="hover-image">
-                        </div>
-                
-                        <p><strong>Operating Systems:</strong> Linux (Ubuntu), macOS, Windows</p>
-                        <div class="os-images">
-                            <img src="assets/linux.png" alt="Linux" class="hover-image">
-                            <img src="assets/macOS.png" alt="macOS" class="hover-image">
-                            <img src="assets/windows.png" alt="Windows" class="hover-image">
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <section id="experience" class="card">
-            <h2>Experience</h2>
-            <!-- Add an id to Keysight experience for targeted linking -->
-            <div id="keysight-experience" class="dynamic-card experience-box">
-                <div class="experience-text">
-                    <h3>R&D Software and DevOps Intern, Keysight Technologies</h3>
-                    <p>June 2024 - Present</p>
-                    <ul>
-                        <li>Developed an image generation system, as measured by successful deployment of customized Windows instances to signal generators, through efficient automation and BIOS configuration management.</li>
-                        <li>Streamlined the build promotions process, as demonstrated by reduced reliance on executables and enhanced functionalities, by using REST API, Jenkins, JFrog Artifactory, and by building a full stack app.</li>
-                    </ul>
-                </div>
-                <div class="experience-images">
-                    <img src="assets/key1.png" alt="Keysight Image 1" class="experience-pic">
-                    <img src="assets/key2.png" alt="Keysight Image 2" class="experience-pic">
-                </div>
-            </div>
-            <!-- Add an id to JPMorgan experience for targeted linking -->
-            <div id="jpmorgan-fellow" class="dynamic-card">
-                <div class="experience-text">
-                    <h3>AI Studio Fellow, JP Morgan Chase</h3>
-                    <p>Aug. 2024 - Present</p>
-                    <ul>
-                        <li>Developed an AI-driven financial news analysis agent, as measured by accurate prediction of stock price impacts using NLP, deep learning, and predictive modeling, through effective news summarization and financial sentiment analysis as part of Cornell University's Break Through Tech's AI Studio program.</li>
-                    </ul>
-                </div>
-                <div class="stock-images">
-                    <img src="assets/stock-predictions.png" alt="Stock Graph" class="stock-pic">
-                </div>
-            </div>
-
-            <!-- Girls Who Code Club Experience -->
-            <div id="gwc-vp" class="dynamic-card">
-                <div class="experience-text">
-                    <h3>Vice President for Girls Who Code Club, UC Santa Cruz</h3>
-                    <p>May 2024 - Present</p>
-                    <ul>
-                        <li>Successfully hosted a technical workshop with Google engineers, as indicated by engaging 150+ members and receiving positive student feedback, through extensive planning and seamless execution.</li>
-                        <li>Boosted club engagement by achieving a 25% increase in membership through the strategic facilitation of professional development workshops, networking events, and team building activities.</li>
-                    </ul>
-                </div>
-                <div class="gwc-images">
-                    <a href="https://ucsc-gwc.club/" target="_blank">
-                        <img src="assets/gwc.png" alt="GWC logo" class="gwc-pic">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Data Structures and Algorithms Tutor & Grader Experience -->
-            <div id="dsa-tutor" class="dynamic-card">
-                <div class="experience-text">
-                    <h3>Data Structures and Algorithms Tutor & Grader, UC Santa Cruz</h3>
-                    <p>Apr. 2023 - June 2024</p>
-                    <ul>
-                        <li>Mentored ~50 students in C/C++, improving their debugging skills, as measured by increased test case scores, by teaching efficient use of Valgrind/GDB debuggers and explaining in-depth coding strategies.</li>
-                    </ul>
-                </div>
-                <div class="dsa-images">
-                    <img src="assets/valgrind.png" alt="Valgrind Image" class="dsa-pic">
-                    <img src="assets/dsa-types.png" alt="Data Structures Types Image" class="dsa-pic">
-                </div>
-            </div>
-
-        </section>
-        
-
-        <section id="projects" class="card">
-            <h2>Projects</h2>
-            <div class="dynamic-card">
-                <h3>Deep Learning Course Scheduler</h3>
-                <p>Automated course scheduling using deep learning and sentiment analysis.</p>
-            </div>
-            <div class="dynamic-card">
-                <h3>Keysight AI-Based Plugin Generator</h3>
-                <p>Developed an AI-based system for plugin generation to reduce engineering workload.</p>
-            </div>
-        </section>
-
-        <section id="hobbies" class="card">
-            <h2>Hobbies</h2>
-            <div class="dynamic-card">
-                <p>
-                    I enjoy running, scuba diving, reading books, and spending time with my five dogs. I love the beach, the ocean, and the city of Santa Cruz!
-                </p>
-                <div class="hobbies-images">
-                    <img src="assets/beach.png" alt="Beach" class="hobby-image">
-                    <img src="assets/hawaii-hike.png" alt="Hawaii Hike" class="hobby-image">
-                    <img src="assets/sc-half-marathon.png" alt="Santa Cruz Half Marathon" class="hobby-image">
-                    <img src="assets/sr-half-marathon.jpeg" alt="Santa Rosa Half Marathon" class="hobby-image">
-                </div>
-            </div>
-        </section>        
-        
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Madeline Miller</p>
-    </footer>
 </body>
 </html>
