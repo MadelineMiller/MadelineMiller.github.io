@@ -118,7 +118,7 @@ function showWelcome() {
         </div>
     `;
     output.innerHTML = welcomeText;
-    scrollToBottom();
+    scrollToTop();  // ✅ Changed from scrollToBottom() to scrollToTop()
 }
 
 const commands = {
