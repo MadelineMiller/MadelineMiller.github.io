@@ -621,7 +621,8 @@ input.addEventListener('keydown', (e) => {
 });
 
 function processCommand(cmd) {
-    addOutput(`<div class="output-line"><span class="prompt">guest@system:~$</span> <span class="command">${cmd}</span></div>`);
+    const commandLineHTML = `<div class="output-line command-entry"><span class="prompt">guest@system:~$</span> <span class="command">${cmd}</span></div>`;
+    addOutput(commandLineHTML);
     
     const parts = cmd.trim().split(' ');
     const command = parts[0].toLowerCase();
@@ -629,14 +630,28 @@ function processCommand(cmd) {
 
     if (commands[command]) {
         const result = commands[command](args);
-        if (result) addOutput(result);
-        // Scroll to top after adding command output so user sees the beginning
-        setTimeout(() => scrollToTop(), 50);
+        if (result) {
+            addOutput(result);
+            // Scroll the command line to the top
+            setTimeout(() => {
+                const commandElements = output.querySelectorAll('.command-entry');
+                const lastCommand = commandElements[commandElements.length - 1];
+                if (lastCommand) {
+                    lastCommand.scrollIntoView({ block: 'start', behavior: 'instant' });
+                }
+            }, 0);
+        }
     } else if (cmd.trim() === '') {
         // Do nothing for empty command
     } else {
         addOutput(`<div class="output-line error">bash: ${command}: command not found</div><div class="output-line info">Type 'help' for available commands.</div>`);
-        scrollToBottom();
+        setTimeout(() => {
+            const commandElements = output.querySelectorAll('.command-entry');
+            const lastCommand = commandElements[commandElements.length - 1];
+            if (lastCommand) {
+                lastCommand.scrollIntoView({ block: 'start', behavior: 'instant' });
+            }
+        }, 0);
     }
 }
 
